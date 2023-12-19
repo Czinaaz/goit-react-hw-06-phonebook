@@ -1,16 +1,21 @@
+import { ContactForm } from './ContactForm/ContactForm';
+import Section from './Section/Section';
+import ContactList from './ContactList/ContactList';
+import { ToastContainer } from 'react-toastify';
+import Filter from './Filter/Filter';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Section title="Phone book">
+				<ToastContainer />
+        <ContactForm />
+      </Section>
+      <Section title="Contacts">
+        <Filter />
+        <ContactList />
+      </Section>
+    </>
   );
 };
